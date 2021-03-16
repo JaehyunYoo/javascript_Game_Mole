@@ -1,0 +1,134 @@
+body{
+    margin:0;
+    padding:0;
+    text-align: center;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+button{
+    background-color: transparent;
+    outline: none;
+    border:0;
+    cursor: pointer;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:20px;
+}
+.test{
+    width: 400px;
+    height:600px;
+    margin:auto;
+    position: relative;
+}
+.game__field{
+    width:100%;
+    height:100%;
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+    background: url(../images/bg.svg) 50% 50% no-repeat;
+    background-size: cover;
+}
+.game__startBtn{
+    visibility: visible;
+}
+.game__time{
+    display: block;
+    background: url(../images/board.svg) 50% 50% no-repeat;
+    background-size: 77%;
+    width:160px;
+    height:56px;
+    padding-top:10px;
+    font-size:28px;
+    font-weight: bold;
+    color:#fff;
+    
+}
+.holes{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top:35px;
+    justify-content: center;
+    align-items: center;
+}
+.hole {
+    flex: 1 0 28%;
+    margin:10px;
+    widows: 100px;
+    height:120px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hole:after {
+    content: '';
+    display: block;
+    background: url(../images/dirt.svg) bottom center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    bottom: -15px;
+}
+.popup{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    border-radius: 10px;
+    background-color:rgba(0,0,0, .5);
+    visibility: visible;
+    
+}
+.popup__message{
+    color:#fff;
+    font-size:35px;
+    padding-bottom:15px;
+    font-weight: bold;
+}
+.mole {
+    background: url('../images/mole.svg') bottom center no-repeat;
+    background-size: 78%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition:all 400ms ease-in;
+        
+}
+.footer{
+    padding:6px 0;
+    visibility: hidden;
+    border-radius:  0 0 10px 10px;
+    background-color: #DF9A57;
+    background: url(../images/footebg.png) 50% 50% no-repeat;
+    background-size: 130%;
+
+}
+.score__title{
+    display: block;
+    font-size:25px;
+    font-weight: bold;
+    color:#fff;
+}
+.score{
+    color:#fff;
+    font-size:25px;
+    font-weight:bold;
+}
+.hole.up .mole {
+    top: 0;
+}
+.hide__popup{
+    visibility: hidden;
+}
